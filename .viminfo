@@ -17,8 +17,8 @@
 $"
 
 # Command Line History (newest to oldest):
-:wq
 :q
+:wq
 :'<,'>s/^/"
 :'<,'>s/^/^"
 :set paste
@@ -94,18 +94,19 @@ $"
 	 
 
 # File marks:
-'0  2  2  ~/.gitignore
-'1  1  0  ~/.gitignore
-'2  6  11  ~/.profile
-'3  7  7  ~/.gitignore
-'4  44  15  ~/.vimrc
-'5  17  0  ~/.vimrc
-'6  132  0  ~/.vimrc
-'7  84  0  ~/.vimrc
-'8  65  0  ~/.vimrc
-'9  190  28  ~/.vimrc
+'0  1  0  ~/.git/COMMIT_EDITMSG
+'1  2  2  ~/.gitignore
+'2  1  0  ~/.gitignore
+'3  6  11  ~/.profile
+'4  7  7  ~/.gitignore
+'5  44  15  ~/.vimrc
+'6  17  0  ~/.vimrc
+'7  132  0  ~/.vimrc
+'8  84  0  ~/.vimrc
+'9  65  0  ~/.vimrc
 
 # Jumplist (newest first):
+-'  1  0  ~/.git/COMMIT_EDITMSG
 -'  2  2  ~/.gitignore
 -'  1  0  ~/.gitignore
 -'  6  11  ~/.profile
@@ -202,9 +203,11 @@ $"
 -'  131  0  ~/.vimrc
 -'  83  0  ~/.vimrc
 -'  64  0  ~/.vimrc
--'  187  33  ~/.vimrc
 
 # History of marks within files (newest to oldest):
+
+> ~/.git/COMMIT_EDITMSG
+	"	1	0
 
 > ~/.gitignore
 	"	2	2
