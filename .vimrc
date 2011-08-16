@@ -13,7 +13,8 @@ set t_Co=256                    "Set terminal to 256 colors
 "-------- Syntax & coloring
 syntax on                       "Turns on syntax highlighting...SHOULD BE AFTER 't_Co' & 'term' declarations
 "colorscheme railscasts         "disabling until I get it linux-compatible
-colorscheme rubyblue
+colorscheme wombat
+"lucius
 
 
 " Some of this was taken from or added to from the 'vimrc_example.vim' file
@@ -61,26 +62,26 @@ if has("autocmd")
 endif " has("audocmd")
 
 "Arrow-key mappings, for the 'unconverted' ;-)
-if s:on_linux
-  " Up
-  set t_ku=OA
-  " Down
-  set t_kd=OB
-  " Right
-  set t_kr=OC
-  " Left
-  set t_kl=OD
-elseif s:on_mac
-  " Up
-  set t_ku=[A
-  " Down
-  set t_kd=[B
-  " Right
-  set t_kr=[C
-  " Left
-  set t_kl=[D
-endif
-
+"if s:on_linux
+"  " Up
+"  set t_ku=OA
+"  " Down
+"  set t_kd=OB
+"  " Right
+"  set t_kr=OC
+"  " Left
+"  set t_kl=OD
+"elseif s:on_mac
+"  " Up
+"  set t_ku=[A
+"  " Down
+"  set t_kd=[B
+"  " Right
+"  set t_kr=[C
+"  " Left
+"  set t_kl=[D
+"endif
+"
 
 "-------- Folding
 set foldmethod=syntax               "Syntax highlighting items specify folds
@@ -97,7 +98,7 @@ set foldcolumn=1                    "Sets width of "foldcolumn" on left of scree
 set foldlevel=1                     "Folds below 1-level. Class/Module-level definitions expanded...all others folded by default
 
 "-------- Tabs
-set softtabstop=2       "Tabs are 2-spaces...using instead of 'tabstop' as per:
+set softtabstop=4       "Tabs are 2-spaces...using instead of 'tabstop' as per:
                         "  'Tabs should always be displayed as mod-8 horizontal spaces so that your
                         "  code looks the same in less/more as in your editor; not everyone is going to
                         "  be using the same tab width setting as you, so using ?set sts? to get what you
@@ -106,7 +107,7 @@ set softtabstop=2       "Tabs are 2-spaces...using instead of 'tabstop' as per:
                         "   -Comment by 'Jeremy' in"  Jamis Buck's 'VIM Follow-up'
                         "    article, http://bit.ly/BRG8 
 
-set shiftwidth=2        "Number of spaces to use for each step of (auto)indent
+set shiftwidth=4        "Number of spaces to use for each step of (auto)indent
 set expandtab           "Replace "tab" characters with the number of  spaces defined
                         " by "tabstop" (aka: "soft tabs")
 
@@ -117,6 +118,10 @@ set cindent             "Get the amount of indent for line according the C inden
 set cpoptions-=J        "Put 1 space character after a line ending with a "." when
                         " joining lines (with Shift-J). Without this option, 2-spaces would be retained
 
+set autoindent
+set smartindent
+set tabstop=4
+
 "-------- Window Preferences
 set winminheight=0      "The minimal height of a window, when it's not the current window.
                         " Setting to zero windows will only display their
@@ -124,10 +129,12 @@ set winminheight=0      "The minimal height of a window, when it's not the curre
 
 "-------- Searching
 set hlsearch          "When there is a previous search pattern, highlight all its matches.
+set incsearch
+
 set ignorecase        "The case of normal letters is ignored when searching
 set smartcase         "Override the 'ignorecase' option if the search pattern contains upper
                       " case characters. Essentially, this makes searches with
-                      " capital letters case-sensitive. If you're going to go
+                     " capital letters case-sensitive. If you're going to go
                       " to all the effort of hitting both <Shift> AND a
                       " letter, your search tool better take it into
                       " consideration.
@@ -179,4 +186,5 @@ set cursorline                  "Highlights the line the cursor is currently on.
 "set cursorcolumn                "Highlights the column the cursor is currently in. (Sometimes) Useful when checking
                                 " indentation. Here mostly for personal reference
 
-
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+inoremap <C-space> <C-x><C-o>
