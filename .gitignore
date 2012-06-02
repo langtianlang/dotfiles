@@ -1,9 +1,10 @@
-*
 !.*
 .DS_Store
+._*
 .CFUserTextEncoding
 .Trash/
 .bash_history
 .profile
 .gitconfig
 .viminfo
+Icon?
