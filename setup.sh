@@ -6,9 +6,12 @@
 # This should be run after the whole dotfiles repo is cloned into ~/dotfiles
 #############################
 
-dir=~/dotfiles                    "dotfile dir"
-olddir=~/dotfiles/old             "dotfile dir for backup previous settings"
-files="vimrc vim zshrc oh-my-zsh"     "files to symlink, should always start with ."
+# directories
+dir=~/dotfiles
+olddir=~/dotfiles/old
+
+# files to symlink, should always start with .
+files="vimrc vim zshrc oh-my-zsh"
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
