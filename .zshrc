@@ -36,7 +36,6 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
-alias jumpssh='ssh -A -t jumphost-001.sjc1.yammer.com ssh $@'
 alias vimconf='vim ~/.vimrc'
 alias zshconf='vim ~/.zshrc'
 
@@ -49,3 +48,5 @@ alias gdc='git diff --cached'
 alias gco='git checkout'
 alias gc='git commit -v'
 
+# Call local setup script
+. ~/.zshrc_local
