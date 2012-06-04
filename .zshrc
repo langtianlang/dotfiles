@@ -50,3 +50,8 @@ alias gc='git commit -v'
 
 # Call local setup script
 . ~/.zshrc_local
+
+# Update dotfiles
+cd ~/dotfiles
+git pull
+cd ~
