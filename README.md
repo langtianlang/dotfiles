@@ -3,7 +3,7 @@
 Some dot files to make my life easier. Feel free to copy/fork
 
 # How to use
-1. clone the whole repo (prefferably into ~/dotfiles)
+1. clone the whole repo (preferably into ~/dotfiles)
 
  `git clone https://github.com/langtianlang/dotfiles.git`
 
