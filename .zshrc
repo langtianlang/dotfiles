@@ -29,7 +29,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -39,7 +39,7 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 alias vimconf='vim ~/.vimrc'
 alias zshconf='vim ~/.zshrc'
 
-# Git stuff, hopefully nothing that can't be reverted
+# A little bit of git stuff, without using the whole git plugin
 alias g='git'
 alias ga='git add'
 alias gs='git status'
@@ -51,7 +51,7 @@ alias gc='git commit -v'
 # Call local setup script
 . ~/.zshrc_local
 
-# Update dotfiles
+# Update dotfiles in the bg on load
 cd ~/dotfiles
-git pull
+git pull &
 cd ~

@@ -216,3 +216,5 @@ map D dd
 """ Filetype improvements
 """"""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufNewFile,BufRead {Rakefile,Vagrantfile,Capfile,*.pp,*.conf} set ft=ruby
+autocmd BufNewFile,BufRead {*.json} set ft=javascript
+autocmd BufNewFile,BufRead {*.md} set ft=markdown
