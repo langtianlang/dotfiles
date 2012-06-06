@@ -52,6 +52,7 @@ alias gd='git diff'
 alias gdc='git diff --cached'
 alias gco='git checkout'
 alias gc='git commit -v'
+alias gp='git push'
 
 # Update dotfiles in the bg on load
 cd ~/dotfiles
