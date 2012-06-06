@@ -1,3 +1,8 @@
+# Call local setup script if exist
+if [[ -r ~/.zshrc_local ]] then
+  . ~/.zshrc_local
+fi
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -47,9 +52,6 @@ alias gd='git diff'
 alias gdc='git diff --cached'
 alias gco='git checkout'
 alias gc='git commit -v'
-
-# Call local setup script
-. ~/.zshrc_local
 
 # Update dotfiles in the bg on load
 cd ~/dotfiles
