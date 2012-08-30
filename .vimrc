@@ -162,7 +162,7 @@ inoremap kj <Esc>
 " Use space instead of :
 nore <Space> :
 " Get rid of : all together
-nore : ;
+" nore : ;
 
 " Fix page up and down
 map <PageUp> <C-U>

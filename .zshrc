@@ -38,6 +38,14 @@ plugins=(zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+# History
+setopt EXTENDED_HISTORY # add timestamps to history
+HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
+setopt APPEND_HISTORY # adds history
+setopt HIST_REDUCE_BLANKS
+
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
@@ -53,8 +61,13 @@ alias gdc='git diff --cached'
 alias gco='git checkout'
 alias gc='git commit -v'
 alias gp='git push'
+alias gpom='git push origin master'
 
 # Update dotfiles in the bg on load
+pushd .
 cd ~/dotfiles
 git pull &
-cd ~
+popd
+
+# Maven
+alias mvnall='mvn clean package findbugs:check'
