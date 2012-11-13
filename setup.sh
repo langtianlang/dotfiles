@@ -11,7 +11,7 @@ dir=~/dotfiles
 olddir=~/dotfiles/old
 
 # files to symlink, should always start with .
-files="vimrc vim zshrc oh-my-zsh"
+files="vimrc vim zshrc oh-my-zsh gitconfig"
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
