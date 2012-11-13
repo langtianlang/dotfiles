@@ -1,0 +1,34 @@
+[user]
+	name = Langtian Lang
+	email = llang@yammer-inc.com
+[core]
+	editor = vim
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+	ui = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[alias]
+  st = "!git who ; git status"
+  ci = "!git who ; git commit"
+  co = "!git who ; git checkout"
+  who = "!echo ; echo ; echo \"\\tworking as `git config user.name`...\" ; echo ; echo"
+  get = "!git who ; git pull"
+  put = "!git who ; git push"
+  fuckit = "!git who ; git reset --hard"
+  lol = log --graph --decorate --oneline
+  lola = log --graph --decorate --oneline --all
+  h = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative

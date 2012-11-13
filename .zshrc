@@ -1,3 +1,6 @@
+# Customize to your needs...
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+
 # Call local setup script if exist
 if [[ -r ~/.zshrc_local ]] then
   . ~/.zshrc_local
@@ -46,8 +49,6 @@ SAVEHIST=100000
 setopt APPEND_HISTORY # adds history
 setopt HIST_REDUCE_BLANKS
 
-# Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
 alias vimconf='vim ~/.vimrc'
 alias zshconf='vim ~/.zshrc'
@@ -71,3 +72,11 @@ popd
 
 # Maven
 alias mvnall='mvn clean package findbugs:check'
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# Vagrant
+alias vssh='vagrant ssh'
+alias vup='vagrant up'
+alias vhalt='vagrant halt'
+alias vreload='vagrant reload'
