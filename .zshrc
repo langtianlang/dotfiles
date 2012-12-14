@@ -49,7 +49,6 @@ SAVEHIST=100000
 setopt APPEND_HISTORY # adds history
 setopt HIST_REDUCE_BLANKS
 
-
 alias vimconf='vim ~/.vimrc'
 alias zshconf='vim ~/.zshrc'
 
@@ -72,6 +71,7 @@ popd
 
 # Maven
 alias mvnall='mvn clean package findbugs:check'
+alias mvnnotest='mvn -DskipTests clean package'
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 
@@ -80,3 +80,5 @@ alias vssh='vagrant ssh'
 alias vup='vagrant up'
 alias vhalt='vagrant halt'
 alias vreload='vagrant reload'
+
+alias histgrep='history | grep'
