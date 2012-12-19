@@ -73,8 +73,6 @@ popd
 alias mvnall='mvn clean package findbugs:check'
 alias mvnnotest='mvn -DskipTests clean package'
 
-export JAVA_HOME=$(/usr/libexec/java_home)
-
 # Vagrant
 alias vssh='vagrant ssh'
 alias vup='vagrant up'
