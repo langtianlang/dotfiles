@@ -81,4 +81,5 @@ alias vup='vagrant up'
 alias vhalt='vagrant halt'
 alias vreload='vagrant reload'
 
-alias histgrep='history | grep'
+alias hg='history | grep'
+alias metrics='curl -s localhost:8081/metrics\?pretty=true | vim - -s ~/.vim/snippets/setjson.script -R'
