@@ -23,7 +23,7 @@ ZSH_THEME="robbyrussell"
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
@@ -33,6 +33,8 @@ ZSH_THEME="robbyrussell"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
+
+unsetopt correct
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -60,8 +62,11 @@ alias gd='git diff'
 alias gdc='git diff --cached'
 alias gco='git checkout'
 alias gc='git commit -v'
-alias gp='git push'
+alias gp='git pull'
 alias gpom='git push origin master'
+alias gpoh='git push origin HEAD'
+alias gh='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
+alias grh='git reset head'
 
 # Update dotfiles in the bg on load
 pushd .
@@ -74,7 +79,7 @@ alias mvnall='mvn clean package findbugs:check'
 alias mvnnotest='mvn -DskipTests clean package'
 
 # Vagrant
-alias vssh='vagrant ssh'
+alias vssh='ssh www.yammer.dev'
 alias vup='vagrant up'
 alias vhalt='vagrant halt'
 alias vreload='vagrant reload'
