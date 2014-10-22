@@ -12,7 +12,7 @@ let s:platform = system("uname")
 let s:on_linux = s:platform =~? "linux"
 let s:on_mac   = has('macunix') || s:platform =~? 'Darwin'
 
-set term=xterm-256color
+"set term=xterm-256color
 set t_Co=256                    "Set terminal to 256 colors
 
 """""""""""""""""""""""""""""""""""""""""""""""""
