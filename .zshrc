@@ -53,6 +53,7 @@ setopt HIST_REDUCE_BLANKS
 
 alias vimconf='vim ~/.vimrc'
 alias zshconf='vim ~/.zshrc'
+alias zshlconf='vim ~/.zshrc_local'
 
 # A little bit of git stuff, without using the whole git plugin
 alias g='git'
@@ -69,10 +70,10 @@ alias gh='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %
 alias grh='git reset head'
 
 # Update dotfiles in the bg on load
-pushd .
-cd ~/dotfiles
-git pull &
-popd
+#pushd .
+#cd ~/dotfiles
+#git pull &
+#popd
 
 # Maven
 alias mvnall='mvn clean package findbugs:check'
